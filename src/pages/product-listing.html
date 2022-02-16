@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Listing</title>
+    <link
+      rel="stylesheet"
+      href="https://min-ui.netlify.app/src/css/minui.css"
+    />
+    <link rel="stylesheet" href="../css/header.css" />
+    <link rel="stylesheet" href="./src/css/homepage.css" />
+    <link rel="stylesheet" href="../css/product-listing.css" />
+  </head>
+  <body>
+    <nav class="flex justify-around items-center navbar">
+      <div class="flex items-center branding">
+        <a href="../../index.html">
+          <h4 class="h4">Min-shop</h4>
+        </a>
+        <a href="./product-listing.html">
+          <h6 class="h6">Shop All</h6>
+        </a>
+      </div>
+
+      <div class="searchDiv">
+        <input
+          class="searchInput"
+          type="text"
+          placeholder="Search for products..."
+        />
+        <i class="fal fa-search searchIcon"></i>
+      </div>
+
+      <ul class="flex items-center pages">
+        <a href="../pages/cart.html" class="flex flex-col items-center">
+          <li><i class="far fa-shopping-bag"></i></li>
+          <li class="pages-title">Cart</li>
+        </a>
+        <a href="../pages/wishlist.html" class="flex flex-col items-center">
+          <li><i class="far fa-heart"></i></li>
+          <li class="pages-title">Wishlist</li>
+        </a>
+        <a href="../pages/auth/login.html" class="flex flex-col items-center">
+          <li><i class="far fa-user"></i></li>
+          <li class="pages-title">Profile</li>
+        </a>
+      </ul>
+    </nav>
+
+    <!-- sidebar -->
+    <!-- product listing -->
+    <main>
+      <aside>
+        <div class="flex justify-between items-center">
+          <h5 class="h6">Filters</h5>
+          <p class="h6">Clear</p>
+        </div>
+
+        <!-- Price range -->
+        <div class="pt-32">
+          <h5 class="h6">Price range</h5>
+          <input
+            type="range"
+            class="price-range"
+            min="0"
+            max="4000"
+            value="1000"
+            step="500"
+          />
+          <span class="selected-price"></span>
+        </div>
+
+        <!-- Sorting -->
+        <div class="pt-32">
+          <h5 class="h6">Sort by</h5>
+          <div class="pt-6">
+            <input type="radio" name="pricing" id="low" />
+            <label for="low" class="pl-2"> Price - Low to high </label>
+          </div>
+          <div>
+            <input type="radio" name="pricing" id="high" />
+            <label for="high" class="pl-2"> Price - High to low </label>
+          </div>
+        </div>
+
+        <!-- Rating -->
+        <div class="pt-32">
+          <h5 class="h6">Rating</h5>
+          <div class="flex items-center">
+            <input type="radio" name="rating" id="4star" />
+            <label for="4star">
+              <div class="rating-div pl-6">
+                <i class="fas fa-star"> </i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fal fa-star"></i>
+                & up
+              </div>
+            </label>
+          </div>
+
+          <div class="flex items-center">
+            <input type="radio" name="rating" id="3star" />
+            <label for="3star">
+              <div class="rating-div pl-6">
+                <i class="fas fa-star"> </i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fal fa-star"></i>
+                <i class="fal fa-star"></i>
+                & up
+              </div>
+            </label>
+          </div>
+
+          <div class="flex items-center">
+            <input type="radio" name="rating" id="2star" />
+            <label for="2star">
+              <div class="rating-div pl-6">
+                <i class="fas fa-star"> </i>
+                <i class="fas fa-star"></i>
+                <i class="fal fa-star"></i>
+                <i class="fal fa-star"></i>
+                <i class="fal fa-star"></i>
+                & up
+              </div>
+            </label>
+          </div>
+
+          <div class="flex items-center">
+            <input type="radio" name="rating" id="1star" />
+            <label for="1star">
+              <div class="rating-div pl-6">
+                <i class="fas fa-star"> </i>
+                <i class="fal fa-star"></i>
+                <i class="fal fa-star"></i>
+                <i class="fal fa-star"></i>
+                <i class="fal fa-star"></i>
+                & up
+              </div>
+            </label>
+          </div>
+        </div>
+
+        <!-- Category -->
+        <div class="pt-32">
+          <h5 class="h6">Category</h5>
+          <!-- <input type="checkbox" name="category" id="men" />
+          <label for="men" class="pl-2">Men</label>
+          <br />
+          <input type="checkbox" name="category" id="women" />
+          <label for="women" class="pl-2">Women</label> -->
+
+          <label class="checkbox-container">
+            Men
+            <input type="checkbox" checked="checked" />
+            <span class="checkmark"></span>
+          </label>
+          <label class="checkbox-container"
+            >Women
+            <input type="checkbox" checked="checked" />
+            <span class="checkmark"></span>
+          </label>
+        </div>
+      </aside>
+      <section class="flex flex-wrap">
+        <!-- Cards -->
+        <div class="card card-v floating-shadow">
+          <div class="card-body flex justify-center">
+            <div class="card-header flex justify-between">
+              <div class="card-badge">ON SALE</div>
+              <span><i class="fal fa-heart"></i></span>
+              <span class="hidden"><i class="fal fa-times-circle"></i></span>
+            </div>
+            <div class="card-overlay-text-div hidden">
+              <div class="overlay-text">Out of stock</div>
+            </div>
+            <div class="card-img-div">
+              <img
+                src="../assets/images/product_listing/product_1.jpg"
+                class="card-img"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="card-footer">
+            <div class="card-text">Balenciaga Grey Speed Sock Sneakers</div>
+            <div class="card-pricing"><strike>$990</strike> &nbsp; $800</div>
+            <button class="card-action-btn">
+              <i class="far fa-shopping-cart"></i> &nbsp; ADD TO CART
+            </button>
+          </div>
+        </div>
+
+        <div class="card card-v floating-shadow">
+          <div class="card-body flex justify-center">
+            <div class="card-header flex justify-between">
+              <div class="card-badge">ON SALE</div>
+              <span><i class="fal fa-heart"></i></span>
+              <span class="hidden"><i class="fal fa-times-circle"></i></span>
+            </div>
+            <div class="card-overlay-text-div hidden">
+              <div class="overlay-text">Out of stock</div>
+            </div>
+            <div class="card-img-div">
+              <img
+                src="../assets/images/product_listing/product_1.jpg"
+                class="card-img"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="card-footer">
+            <div class="card-text">Balenciaga Grey Speed Sock Sneakers</div>
+            <div class="card-pricing"><strike>$990</strike> &nbsp; $800</div>
+            <button class="card-action-btn">
+              <i class="far fa-shopping-cart"></i> &nbsp; ADD TO CART
+            </button>
+          </div>
+        </div>
+
+        <div class="card card-v floating-shadow">
+          <div class="card-body flex justify-center">
+            <div class="card-header flex justify-between">
+              <div class="card-badge">ON SALE</div>
+              <span><i class="fal fa-heart"></i></span>
+              <span class="hidden"><i class="fal fa-times-circle"></i></span>
+            </div>
+            <div class="card-overlay-text-div hidden">
+              <div class="overlay-text">Out of stock</div>
+            </div>
+            <div class="card-img-div">
+              <img
+                src="../assets/images/product_listing/product_1.jpg"
+                class="card-img"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="card-footer">
+            <div class="card-text">Balenciaga Grey Speed Sock Sneakers</div>
+            <div class="card-pricing"><strike>$990</strike> &nbsp; $800</div>
+            <button class="card-action-btn">
+              <i class="far fa-shopping-cart"></i> &nbsp; ADD TO CART
+            </button>
+          </div>
+        </div>
+
+        <div class="card card-v floating-shadow">
+          <div class="card-body flex justify-center">
+            <div class="card-header flex justify-between">
+              <div class="card-badge">ON SALE</div>
+              <span><i class="fal fa-heart"></i></span>
+              <span class="hidden"><i class="fal fa-times-circle"></i></span>
+            </div>
+            <div class="card-overlay-text-div hidden">
+              <div class="overlay-text">Out of stock</div>
+            </div>
+            <div class="card-img-div">
+              <img
+                src="../assets/images/product_listing/product_1.jpg"
+                class="card-img"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="card-footer">
+            <div class="card-text">Balenciaga Grey Speed Sock Sneakers</div>
+            <div class="card-pricing"><strike>$990</strike> &nbsp; $800</div>
+            <button class="card-action-btn">
+              <i class="far fa-shopping-cart"></i> &nbsp; ADD TO CART
+            </button>
+          </div>
+        </div>
+
+        <div class="card card-v floating-shadow">
+          <div class="card-body flex justify-center">
+            <div class="card-header flex justify-between">
+              <div class="card-badge">ON SALE</div>
+              <span><i class="fal fa-heart"></i></span>
+              <span class="hidden"><i class="fal fa-times-circle"></i></span>
+            </div>
+            <div class="card-overlay-text-div hidden">
+              <div class="overlay-text">Out of stock</div>
+            </div>
+            <div class="card-img-div">
+              <img
+                src="../assets/images/product_listing/product_1.jpg"
+                class="card-img"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="card-footer">
+            <div class="card-text">Balenciaga Grey Speed Sock Sneakers</div>
+            <div class="card-pricing"><strike>$990</strike> &nbsp; $800</div>
+            <button class="card-action-btn">
+              <i class="far fa-shopping-cart"></i> &nbsp; ADD TO CART
+            </button>
+          </div>
+        </div>
+
+        <div class="card card-v floating-shadow">
+          <div class="card-body flex justify-center">
+            <div class="card-header flex justify-between">
+              <div class="card-badge">ON SALE</div>
+              <span><i class="fal fa-heart"></i></span>
+              <span class="hidden"><i class="fal fa-times-circle"></i></span>
+            </div>
+            <div class="card-overlay-text-div hidden">
+              <div class="overlay-text">Out of stock</div>
+            </div>
+            <div class="card-img-div">
+              <img
+                src="../assets/images/product_listing/product_1.jpg"
+                class="card-img"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="card-footer">
+            <div class="card-text">Balenciaga Grey Speed Sock Sneakers</div>
+            <div class="card-pricing"><strike>$990</strike> &nbsp; $800</div>
+            <button class="card-action-btn">
+              <i class="far fa-shopping-cart"></i> &nbsp; ADD TO CART
+            </button>
+          </div>
+        </div>
+
+        <div class="card card-v floating-shadow">
+          <div class="card-body flex justify-center">
+            <div class="card-header flex justify-between">
+              <div class="card-badge">ON SALE</div>
+              <span><i class="fal fa-heart"></i></span>
+              <span class="hidden"><i class="fal fa-times-circle"></i></span>
+            </div>
+            <div class="card-overlay-text-div hidden">
+              <div class="overlay-text">Out of stock</div>
+            </div>
+            <div class="card-img-div">
+              <img
+                src="../assets/images/product_listing/product_1.jpg"
+                class="card-img"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="card-footer">
+            <div class="card-text">Balenciaga Grey Speed Sock Sneakers</div>
+            <div class="card-pricing"><strike>$990</strike> &nbsp; $800</div>
+            <button class="card-action-btn">
+              <i class="far fa-shopping-cart"></i> &nbsp; ADD TO CART
+            </button>
+          </div>
+        </div>
+
+        <div class="card-new"></div>
+      </section>
+    </main>
+    <script>
+      const slider = document.querySelector('.price-range')
+      const selectedPrice = document.querySelector('.selected-price')
+      selectedPrice.innerHTML = slider.value
+      console.log(slider)
+      console.log(selectedPrice)
+      slider.oninput = () => (selectedPrice.innerHTML = slider.value)
+    </script>
+  </body>
+</html>
