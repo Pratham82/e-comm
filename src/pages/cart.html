@@ -10,7 +10,7 @@
       href="https://min-ui.netlify.app/src/css/minui.css"
     />
     <link rel="stylesheet" href="../css/header.css" />
-    <link rel="stylesheet" href="./src/css/homepage.css" />
+    <link rel="stylesheet" href="../css/cart.css" />
   </head>
   <body>
     <nav class="flex justify-around items-center navbar">
@@ -47,5 +47,95 @@
         </a>
       </ul>
     </nav>
+    <section class="flex flex-col items-center">
+      <div class="card card-h flex floating-shadow m-10">
+        <div class="card-body flex justify-center">
+          <div class="card-header flex justify-between hidden">
+            <div class="card-badge">ON SALE</div>
+            <span><i class="fal fa-heart"></i></span>
+            <span class="hidden"><i class="fal fa-times-circle"></i></span>
+          </div>
+          <div class="card-overlay-text-div hidden">
+            <div class="overlay-text">Out of stock</div>
+          </div>
+          <div class="card-img-div">
+            <img
+              src="../assets/images/product_listing/product_1.jpg"
+              class="card-img img-h"
+              alt=""
+            />
+          </div>
+        </div>
+        <div class="card-footer card-footer-h">
+          <div class="flex items-center">
+            <div class="card-text pr-10">
+              Nike React Infinity Flyknit Running Shoes
+            </div>
+            <div class="text-right">
+              <i class="far fa-times"></i>
+            </div>
+          </div>
+          <div class="card-pricing">$900</div>
+          <button class="card-action-btn btn-h">
+            <i class="far fa-shopping-cart"></i> &nbsp; ADD TO CART
+          </button>
+          <button class="card-action-btn-outline">
+            <i class="far fa-bolt"></i> &nbsp; BUY NOW
+          </button>
+        </div>
+      </div>
+      <div class="card card-h flex floating-shadow m-10">
+        <div class="card-body flex justify-center">
+          <div class="card-header flex justify-between hidden">
+            <div class="card-badge">ON SALE</div>
+            <span><i class="fal fa-heart"></i></span>
+            <span class="hidden"><i class="fal fa-times-circle"></i></span>
+          </div>
+          <div class="card-overlay-text-div hidden">
+            <div class="overlay-text">Out of stock</div>
+          </div>
+          <div class="card-img-div">
+            <img
+              src="../assets/images/product_listing/product_1.jpg"
+              class="card-img img-h"
+              alt=""
+            />
+          </div>
+        </div>
+        <div class="card-footer card-footer-h">
+          <div class="flex items-center">
+            <div class="card-text pr-10">
+              Nike React Infinity Flyknit Running Shoes
+            </div>
+            <div class="text-right">
+              <i class="far fa-times"></i>
+            </div>
+          </div>
+          <div class="card-pricing">$900</div>
+          <button class="card-action-btn btn-h">
+            <i class="far fa-shopping-cart"></i> &nbsp; ADD TO CART
+          </button>
+          <button class="card-action-btn-outline">
+            <i class="far fa-bolt"></i> &nbsp; BUY NOW
+          </button>
+        </div>
+      </div>
+      <div class="checkout">
+        <p class="flex justify-between"><span>Items</span> <span>2</span></p>
+        <p class="flex justify-between">
+          <span>Subtotal</span> <span>$1800</span>
+        </p>
+        <p class="flex justify-between">
+          <span>Delivery</span> <span>$20</span>
+        </p>
+        <p class="flex justify-between total">
+          <span>Total</span> <span>$1820</span>
+        </p>
+        <button class="btn primary-filled-btn checkout-btn">Checkout</button>
+        <button class="btn primary-outlined-btn shop-btn">
+          Continue Shopping
+        </button>
+      </div>
+    </section>
   </body>
 </html>
