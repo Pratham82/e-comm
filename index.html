@@ -4,9 +4,89 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Min Shop</title>
+    <link
+      rel="stylesheet"
+      href="https://min-ui.netlify.app/src/css/minui.css"
+    />
+    <link rel="stylesheet" href="./src/css/header.css" />
+    <link rel="stylesheet" href="./src/css/homepage.css" />
   </head>
   <body>
-    E-commerce
+    <nav class="flex justify-around items-center navbar">
+      <div class="flex items-center branding">
+        <a href="./index.html">
+          <h4 class="h4">Min-shop</h4>
+        </a>
+        <a href="./src/pages/product-listing.html">
+          <h6 class="h6">Shop All</h6>
+        </a>
+      </div>
+
+      <div class="searchDiv">
+        <input
+          class="searchInput"
+          type="text"
+          placeholder="Search for products..."
+        />
+        <i class="fal fa-search searchIcon"></i>
+      </div>
+
+      <ul class="flex items-center pages">
+        <a href="./src/pages/cart.html" class="flex flex-col items-center">
+          <li><i class="far fa-shopping-bag"></i></li>
+          <li class="pages-title">Cart</li>
+        </a>
+        <a href="./src/pages/wishlist.html" class="flex flex-col items-center">
+          <li><i class="far fa-heart"></i></li>
+          <li class="pages-title">Wishlist</li>
+        </a>
+        <a
+          href="./src/pages/auth/login.html"
+          class="flex flex-col items-center"
+        >
+          <li><i class="far fa-user"></i></li>
+          <li class="pages-title">Profile</li>
+        </a>
+      </ul>
+    </nav>
+    <main>
+      <div class="item">
+        <img
+          src="./src/assets/images/homepage/balenciaga-white-track-low-top-sneakers-1.jpg"
+          alt=""
+        />
+      </div>
+      <div class="item">
+        <img
+          src="./src/assets/images/homepage/balenciaga-track-faded-effect-sneakers-2.jpg"
+          alt=""
+        />
+      </div>
+      <div class="item">
+        <img
+          src="./src/assets/images/homepage/balenciaga-grey-track-clear-sole-sneakers-3.jpg"
+          alt=""
+        />
+      </div>
+      <div class="item">
+        <img
+          src="./src/assets/images/homepage/balenciaga-grey-triple-s-chunky-sneaker-4.jpg"
+          alt=""
+        />
+      </div>
+      <div class="item">
+        <img
+          src="./src/assets/images/homepage/balenciaga-black-runner-sneakers-5.jpg"
+          alt=""
+        />
+      </div>
+      <div class="item">
+        <img
+          src="./src/assets/images/homepage/balenciaga-neutral-triple-s-sneakers-6.jpg"
+          alt=""
+        />
+      </div>
+    </main>
   </body>
 </html>
